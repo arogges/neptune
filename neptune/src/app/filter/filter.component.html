@@ -1,29 +1,30 @@
+<div *ngIf="isWait" class="overlay">
+  <div class="center">
+    <mat-progress-spinner mode="indeterminate" color="accent">
+    </mat-progress-spinner>
+  </div>
+</div>
+
 <!-- PRODUCT SEARCH -->
-<div fxLayout="row" fxFill>
-    <div fxLayout="column" fxFlex="40">
-      <mat-card>
-        <app-route-selector [(form)]="form"></app-route-selector>
+<div fxLayout="row" fxLayout.xs="column" fxFill>
+  <div fxLayout="column" fxFlex="40" fxFlex.xs>
+    <mat-card>
+      <app-route-selector [(form)]="form"></app-route-selector>
 
-        <mat-slide-toggle [(ngModel)]="isChecked">IA</mat-slide-toggle>
-      </mat-card>
-      <mat-card>
-        <app-query-builder [entities]="entities" (onValue)="onValues($event)"></app-query-builder>
-        <mat-card-actions>
-          <button mat-button (click)="submit()">Test</button>
-          <button mat-button (click)="downloadCSV()">DownloadCSV</button>
-        </mat-card-actions>
-      </mat-card>
+      <mat-slide-toggle [(ngModel)]="isChecked">IA</mat-slide-toggle>
+    </mat-card>
+    <mat-card>
+      <app-query-builder [entities]="entities" (onValue)="onValues($event)"></app-query-builder>
+      <mat-card-actions>
+        <button mat-button (click)="submit()">Test</button>
+        <button mat-button (click)="downloadCSV()">DownloadCSV</button>
+      </mat-card-actions>
+    </mat-card>
 
-    </div>
+  </div>
   <div fxLayout="column" fxFlex>
-      <mat-card class="vis-container">
-        <app-vis
-          fxFill
-          class="vis-container"
-          [inputNodes]="nodes"
-          [inputEdges]="edges"
-
-        ></app-vis>
-      </mat-card>
+    <mat-card class="vis-container">
+      <app-vis fxFill class="vis-container" [inputNodes]="nodes" [inputEdges]="edges"></app-vis>
+    </mat-card>
   </div>
 </div>
