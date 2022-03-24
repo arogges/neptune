@@ -7,6 +7,8 @@ import { Entity, EntityName } from 'src/lib/enums/entities';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent{
+  title = "C360 - Customer Data Platform & Identity Graph";
+
   entities: Entity[]  = [{
     entity: EntityName.product,
     lines: [{}]
