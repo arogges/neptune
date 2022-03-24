@@ -21,10 +21,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FilterModule } from 'src/lib/components/filter/filter.module';
 import { VisModule } from 'src/lib/components/vis/vis.module';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
-
-
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const NODE_MODULES = [
   MatToolbarModule,
@@ -35,7 +32,8 @@ const NODE_MODULES = [
   MatCheckboxModule,
   MatCardModule,
   MatInputModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatProgressSpinnerModule
 ]
 
 @NgModule({
